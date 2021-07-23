@@ -1,6 +1,9 @@
-# This should be cloned to your .oh-my-zsh/custom/themes folder.
-# This theme also makes use of the virtualbox.plugin.zsh theme which is another gist
-# and should be installed in the .oh-my-zsh/custom/plugins/virtualbox folder.
+# This should be copied to your .oh-my-zsh/custom/themes folder or use the
+# install-lil-peeps-zsh-theme.sh install script.
+#
+# This theme also makes use of the virtualbox.plugin.zsh theme which 
+# should be copied to the .oh-my-zsh/custom/plugins/virtualbox folder or
+# you can use the install-virtualbox-plugin-zsh.sh install script.
 
 ARROW=%{$fg_bold[red]%}＞$reset_color
 RETURN=%{$fg[red]%}⮐$reset_color
