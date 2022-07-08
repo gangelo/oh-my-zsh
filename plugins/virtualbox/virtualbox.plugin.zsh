@@ -1,5 +1,4 @@
-# This plugin should be copied to the .oh-my-zsh/custom/plugins/virtualbox folder or
-# you can use the install-virtualbox-plugin-zsh.sh install script.
+# This plugin should be copied to the .oh-my-zsh/custom/plugins/virtualbox folder.
 
 function virtualbox_vm_status {
     if [ -z "$(vboxmanage list runningvms)" ]; then

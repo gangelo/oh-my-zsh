@@ -1,16 +1,11 @@
-# This should be copied to your .oh-my-zsh/custom/themes folder or use the
-# install-lil-peeps-zsh-theme.sh install script.
-#
-# This theme also makes use of the virtualbox.plugin.zsh theme which 
-# should be copied to the .oh-my-zsh/custom/plugins/virtualbox folder or
-# you can use the install-virtualbox-plugin-zsh.sh install script.
+# This should be cloned to your .oh-my-zsh/custom/themes folder.
 
 ARROW=%{$fg_bold[red]%}＞$reset_color
 RETURN=%{$fg[red]%}⮐$reset_color
 
 PROMPT=$'\
 $ARROW%{$fg_bold[yellow]%}%D{%a %b %d, %Y %-I:%M:%S %p}%{$reset_color%}\
-$ARROW%{$fg_bold[yellow]%}$(virtualbox_vm_status)%{$reset_color%}\
+$ARROW%{$fg_bold[yellow]%}Proxy: $(proxy_status)%{$reset_color%}\
 $ARROW%{$fg_bold[cyan]%}%~%{$reset_color%}$(git_prompt_info)%{$reset_color%}\
 \
 %n@%m $ARROW%{$reset_color%}'
