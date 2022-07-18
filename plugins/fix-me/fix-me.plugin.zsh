@@ -12,6 +12,8 @@ function node_check {
     message+="The current Node.js version (${version}) is out of sync with eSTAT's expected Node.js version ($EXPECTED_NODE_VERSION)! "
     message+="Run 'node_fix' to force homebrew to link to the expected eSTAT Node.js version."
     echo $message
+  else
+    echo "Node version (${version}) checks okay!"
   fi
 }
 node_check
