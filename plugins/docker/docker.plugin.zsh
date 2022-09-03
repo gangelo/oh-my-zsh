@@ -15,15 +15,11 @@
 #    $fg_bold[yellow]%}USCIS proxy status \[$(docker_status)%{$fg_bold[yellow]%}\]%{$reset_color%}
 
 function docker_status {
-    #setopt shwordsplit
-
     local container_status=""
     local containers=$CONTAINERS
 
     echo $fg_bold[cyan]Checking containers: $containers \.\.\. $reset_color
 
-    # setopt sh_word_split
-    #for container in $(echo $containers); do
     for container in ${=containers}; do
         if [ "$(docker inspect -f '{{.State.Running}}' ${container} 2>/dev/null)" = "true" ]; then
             # echo ✅ $fg_bold[green]${container}$reset_color
@@ -33,5 +29,4 @@ function docker_status {
             echo $fg_bold[red]⬇︎$reset_color ${container}
         fi
     done
-    #echo $container_status
 }
